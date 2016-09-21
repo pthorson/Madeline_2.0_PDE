@@ -5,6 +5,22 @@
 # 
 #     Released under the GNU GPL
 #     
+# this one is important
+SET(CMAKE_SYSTEM_NAME Generic)
+#this one not so much
+SET(CMAKE_SYSTEM_VERSION 1)
+
+SET(CMAKE_SYSTEM_PROCESSOR mips)
+SET(CMAKE_CROSSCOMPILING 1)
+
+# specify the cross compiler
+SET(CMAKE_C_COMPILER   /opt/mips-unknown-elf/bin/mips-unknown-elf-gcc)
+SET(CMAKE_CXX_COMPILER /opt/mips-unknown-elf/bin/mips-unknown-elf-g++)
+
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++0x -DPATH_MAX=4096 -march=mips1 -specs=/opt/mips-unknown-elf/mips-unknown-elf/lib/crt0-override.spec" CACHE STRING "CXX_FLAGS for nestedvm")
+SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DPATH_MAX=4096 -march=mips1 -specs=/opt/mips-unknown-elf/mips-unknown-elf/lib/crt0-override.spec" CACHE STRING "C_FLAGS for nestedvm")
+
+
 PROJECT(MADELINE)
 CMAKE_MINIMUM_REQUIRED(VERSION 3.1)
 SET(CMAKE_CXX_STANDARD 11)
