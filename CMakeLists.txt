@@ -42,6 +42,14 @@ SET(MADELINE_VERSION "${MADELINE_VERSION_MAJOR}.${MADELINE_VERSION_MINOR}")
 #
 ENABLE_TESTING()
 
+# set library search paths
+set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH}
+              /lib
+              /usr/lib
+              /usr/local/lib
+              /usr/lib/x86_64-linux-gnu)
+set(CMAKE_FIND_LIBRARY_SUFFIXES .a ${CMAKE_FIND_LIBRARY_SUFFIXES})
+
 #
 # Check if there exists a system-provided BZip2
 #
