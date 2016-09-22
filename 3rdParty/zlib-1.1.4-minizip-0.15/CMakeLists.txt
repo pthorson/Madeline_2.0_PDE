@@ -1,6 +1,7 @@
 
 SET( SOURCES
 	unzip.c
+	${ZLIB_INCLUDE_DIR}
 )
 
 ADD_LIBRARY( unzip STATIC ${SOURCES} )
