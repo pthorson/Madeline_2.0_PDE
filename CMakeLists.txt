@@ -50,6 +50,11 @@ set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH}
               /usr/lib/x86_64-linux-gnu)
 set(CMAKE_FIND_LIBRARY_SUFFIXES .a ${CMAKE_FIND_LIBRARY_SUFFIXES})
 
+set(CMAKE_INCLUDE_PATH ${CMAKE_INCLUDE_PATH}
+              /usr/include
+              /usr/local/include)
+
+
 #
 # Check if there exists a system-provided BZip2
 #
